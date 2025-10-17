@@ -1,0 +1,7 @@
+.bannerCard {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://raw.githubusercontent.com/Mat-Angel/imagenes-web/refs/heads/main/backgorund.png');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: auto;
+}

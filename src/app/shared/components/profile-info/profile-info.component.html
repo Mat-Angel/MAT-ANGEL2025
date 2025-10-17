@@ -1,0 +1,33 @@
+@if ( authService.authStatus() === 'not-authenticated') {
+<a [routerLink]="['/auth/login']" class="btn text-decoration-none d-flex flex-row align-items-center gap-2"
+  style="width: 40px; height:40px;">
+  <span class="d-none d-sm-block">Login</span>
+  <rounded-icon faIconId="fa-solid fa-user-plus" />
+</a>
+} @else if( authService.authStatus() === 'authenticated' ) {
+<a class="btn text-decoration-none d-flex flex-row align-items-center gap-2" [matMenuTriggerFor]="cardTrigger">
+  <span class="d-none d-sm-block btn btn-2">{{authService.displayName() ? authService.displayName() : authService.userEmail()}}</span>
+  <img class="rounded-circle" [src]='authService.photoName() | avatarImage' title="MAT Angel" width="40px"
+    draggable="false">
+</a>
+} @else {
+<div class="spinner-grow" style="width: 40px; height:40px;" role="status"></div>
+}
+
+<mat-menu #cardTrigger="matMenu" xPosition="before" >
+  <div class="row g-0 text-black">
+    <div class="col-3">
+      <img  class="w-100 mx-2" [src]='authService.photoName() | avatarImage' alt="avatar" draggable="false">
+    </div>
+    <div class="col-9">
+      <div class="px-2 m-2">
+        <p class="fw-bold m-0">{{authService.displayName()}}</p>
+        <p class="fw-light text-truncate">{{authService.userEmail()}}</p>
+      </div>
+    </div>
+  </div>
+  <button class="mx-2 my-2 w-50" matButton="elevated" (click)="authService.logout()">
+    <i class="fa-solid fa-arrow-right-from-bracket"></i>Logout
+  </button>
+</mat-menu>
+

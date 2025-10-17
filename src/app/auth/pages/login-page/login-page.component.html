@@ -1,0 +1,17 @@
+<form [formGroup]="loginForm" class="px-5">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" formControlName="email">
+    <form-text-helper [form]="loginForm" fieldName="email"></form-text-helper>
+  </div>
+
+
+  <label for="inputPassword5" class="form-label">Password</label>
+  <input type="password" id="password" class="form-control" aria-describedby="passwordHelpBlock" formControlName="password">
+  <form-text-helper [form]="loginForm" fieldName="password"></form-text-helper>
+  <div class="row">
+    <button class="col-6 loginButton" matButton="tonal" (click)="onSubmit()" [disabled]="!loginForm.valid">
+      Ingresar
+    </button>
+  </div>
+</form>

@@ -1,0 +1,115 @@
+
+  <div class="neonHeader">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <button class="d-block d-sm-none" mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon style="color: white;">menu</mat-icon>
+      </button>
+
+      <a routerLink="/">
+        <img [src]="`${baseUrl()}Logo.png`" width="125" title="MAT Angel" draggable="false">
+      </a>
+
+      <div class="d-none d-sm-block">
+        @for (route of menuData(); track $index) {
+          @switch (route.type) {
+            @case ('menuRoute') {
+              <a mat-button [routerLink]="route.link">
+                <span [routerLinkActive]="'activeMenu'" [routerLinkActiveOptions]="{exact: true}"
+                class="btn btn-2">{{route.name}}</span>
+              </a>
+            }
+            @case ('menuUrl') {
+              <a mat-button [href]="route.link" target="_blank" class="btn btn-2">
+                {{route.name}}
+              </a>
+            }
+            @case ('menuTrigger') {
+              <a mat-button class="dropdown-toggle" [matMenuTriggerFor]="menuTrigger"
+              (click)="setChildOptions(route.child || [])">
+              <span class="btn btn-2">{{route.name}}</span>
+              </a>
+            }
+          }
+        }
+      </div>
+
+      <profile-info/>
+
+    </div>
+  </div>
+
+<mat-sidenav-container class="sideNavContainer">
+
+  <mat-sidenav class="sideNav" #sidenav (keydown.escape)="sidenav.close()">
+    <div (click)="sidenav.close()" class="sideNavBackdrop">
+      <button class="d-flex" style="margin: 1rem; margin-left: auto;" mat-icon-button>
+        <mat-icon style="color: white;">close</mat-icon>
+      </button>
+    </div>
+    <div style="height: 100%; width: 100%; background-color: white; position: absolute">
+      <div style="margin: 1rem;">
+        <navbar-header></navbar-header>
+        <div class="fw-bold fs-3" style="margin-top: 1rem; margin-bottom: 1rem">Menu</div>
+        <div class="sideNavItem">
+          @for (route of menuData(); track $index) {
+            @switch (route.type) {
+              @case ('menuRoute') {
+                <button mat-button (click)="sidenav.close()" [routerLink]="route.link" color="primary">
+                  <div class="d-flex flex-row mb-3">
+                    <div class="my-auto">
+                      <i [class]="route.icon"></i>
+                    </div>
+                    <div class="p-2">
+                      <span class="nav-btn nav-btn-2">{{route.name}}</span>
+                    </div>
+                  </div>
+                </button>
+              }
+              @case ('menuUrl') {
+                <button mat-button>
+                  <div class="d-flex flex-row mb-3">
+                    <div class="my-auto">
+                      <i [class]="route.icon"></i>
+                    </div>
+                    <div class="p-2">
+                      <a [href]="route.link" target="_blank" class="nav-btn nav-btn-2">{{route.name}}</a>
+                    </div>
+                  </div>
+                </button>
+              }
+              @case ('menuTrigger') {
+                <button mat-button [matMenuTriggerFor]="menuTrigger" (click)="setChildOptions(route.child || [])">
+                  <div class="d-flex flex-row mb-3">
+                    <div class="my-auto"><i [class]="route.icon"></i></div>
+                    <div class="p-2"><span class="nav-btn nav-btn-2">{{route.name}}▾</span></div>
+                  </div>
+                </button>
+              }
+            }
+          }
+        </div>
+      </div>
+    </div>
+  </mat-sidenav>
+</mat-sidenav-container>
+
+<mat-menu #menuTrigger="matMenu" xPosition="before">
+  @for(option of selectedChildOptions(); track $index){
+    @if ($index===0 && option.subtitle) {
+      <div class="text-center text-dark">
+        <span class="">{{option.subtitle}}</span>
+      </div>
+      <mat-divider></mat-divider>
+    }
+    @if(option.type === 'menuRoute'){
+      <a mat-menu-item [routerLink]="option.link" (click)="sidenav.close()"  class="dropdown-item">
+        <i [class]="option.icon"></i> {{option.name}}
+      </a>
+    } @else {
+      <a mat-menu-item (click)="sidenav.close()" [href]="option.link" target="_blank" class="dropdown-item">
+        <i [class]="option.icon"></i> {{option.name}}
+      </a>
+      }
+    }
+</mat-menu>

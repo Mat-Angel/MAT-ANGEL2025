@@ -1,0 +1,418 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+
+@use '@angular/material' as mat;
+// Customize the entire app. Change :root to your selector if you want to scope the styles.
+:root {
+  @include mat.tabs-overrides((active-focus-indicator-color: rgb(255, 255, 255),
+      active-focus-label-text-color: #15c0ff,
+      active-hover-indicator-color: rgb(255, 255, 255),
+      active-hover-label-text-color: #15c0ff,
+      active-indicator-color: #15c0ff,
+      active-label-text-color: #15c0ff,
+      active-ripple-color: #15c0ff,
+      divider-color: #ffffff,
+      inactive-focus-label-text-color: #ffffff,
+      inactive-hover-label-text-color: #ffffff,
+      inactive-label-text-color: #ffffff,
+      inactive-ripple-color: #ffffff,
+      pagination-icon-color: #ffffff));
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  color: whitesmoke;
+  background-color: rgb(32, 32, 32);
+  background-image: linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black),
+    linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black),
+    linear-gradient(to bottom, rgb(8, 8, 8), rgb(32, 32, 32));
+  background-size: 10px 10px, 10px 10px, 10px 5px;
+  background-position: 0px 0px, 5px 5px, 0px 0px;
+}
+
+button:focus {
+  outline: none;
+}
+
+
+.kode-mono-font {
+  font-family: "Kode Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: auto;
+  font-style: normal;
+}
+
+.prosto-one-regular {
+  font-family: "Prosto One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.saira-stencil-font {
+  font-family: "Saira Stencil One", sans-serif;
+  font-style: normal;
+}
+
+.coiny-regular {
+  font-family: "Coiny", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.menuIcon {
+  margin-left: 0px;
+  position: fixed;
+  top: 11px;
+  left: 1rem;
+  color: white;
+}
+
+.content {
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-top: 5rem;
+}
+
+.B-Rojo {
+  border: solid 1px red;
+}
+
+.B-Verde {
+  border: solid 1px yellowgreen;
+}
+
+.B-Azul {
+  border: solid 1px blue;
+}
+
+.mat-step-header {
+  //para deshabilitar el click en el encabezado
+  pointer-events: none !important;
+}
+
+.titleText {
+  margin-left: 2.5%;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #646464;
+  text-shadow: 0px 0px 3px #15c0ff, 0px 0px 8px #15c0ff, 0px 0px 10px #15c0ff;
+}
+
+.agendaForm {
+  border-radius: 25px;
+  border: 2px solid #008cff;
+  background-color: aliceblue;
+  padding: 20px;
+  width: 100%;
+  height: auto;
+  color: black;
+}
+
+.personaCard {
+  border-radius: 15px;
+  border: 2px solid #00a108;
+  background-color: aliceblue;
+  padding: 5px;
+  padding-left: 15px;
+  margin-bottom: 10px;
+  width: 15rem;
+  height: 20rem;
+  color: black;
+}
+
+.adivinadorContainer {
+  border: 2px solid #15c0ff;
+  border-radius: 20px;
+  min-height: 30rem;
+}
+
+.adivinadorNumber {
+  width: 8%;
+  height: auto;
+  text-align: center;
+  display: inline-block !important;
+  margin: 0.5rem;
+  padding: 5px !important;
+}
+
+.buttonGroup button {
+  margin-right: 2rem;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.neonBlueText {
+  text-shadow: 3px 3px 7px #15c0ff;
+
+}
+
+.neonBlueBorder {
+  box-shadow: 0px 0px 15px 5px #15c0ff;
+}
+
+.footer {
+  background-color: black;
+  box-shadow: 0px 1px 15px 1px #15c0ff;
+}
+
+.kode-mono {
+  font-family: "Kode Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: auto;
+  font-style: normal;
+}
+
+img {
+  user-select: none;
+}
+
+
+.loginContainer {
+  margin-bottom: 5rem;
+  height: auto;
+  color: black;
+  border: 2px rgb(0, 0, 0) solid;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 10px 3px #15c0ff;
+}
+
+.loginElement {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.loginTitle {
+  text-align: center;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #15c0ff;
+  text-shadow: 2px 2px 7px #000000;
+}
+
+
+.loginButton {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+
+.mat-horizontal-stepper-header-container .mat-step-header {
+  padding: 0 10px !important;
+  /* padding lateral más chico */
+  margin: 0 !important;
+  /* elimina márgenes extra */
+  min-width: unset !important;
+  /* evita ancho mínimo forzado */
+}
+
+
+.blue-neon-shadow {
+  border: 2px rgb(0, 0, 0) solid;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 3px #15c0ff
+}
+
+
+.blue-neon-color {
+  color: #15c0ff
+}
+
+
+.bg-carbon {
+  background-color: rgb(32, 32, 32);
+  background-image: linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black),
+    linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black),
+    linear-gradient(to bottom, rgb(8, 8, 8), rgb(32, 32, 32));
+  background-size: 10px 10px, 10px 10px, 10px 5px;
+  background-position: 0px 0px, 5px 5px, 0px 0px;
+}
+
+
+.btn-zoom {
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* animación suave */
+}
+
+.btn-zoom:hover {
+  transform: scale(1.1); /* se agranda un 10% */
+  box-shadow: 0 0 10px 4px #15c0ff; /* efecto de sombra al pasar el mouse */
+}
+
+
+
+
+
+////////////////////////      NAVBAR      ////////////////////////
+.neonHeader {
+  background-color: black;
+  z-index: 10;
+  width: 100%;
+  height: 4rem;
+  box-shadow: 0px 1px 15px 1px #15c0ff;
+  position: fixed !important;
+  display: flex !important;
+
+}
+
+.m-headerItem {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mStyle {
+  border-top: solid 2px white;
+  border-bottom: solid 2px white;
+  /* text-shadow: 0px 0px 5px #0080ff, 0px 0px 5px #0080ff, 0px 0px 5px #0080ff;
+  box-shadow:0px 0px 5px 2px #0080ff; */
+}
+
+.playButton {
+  font-size: 1.5rem;
+}
+
+/*
+/////////////// MUSE STYLE /////////////////
+ */
+.btn {
+  color: #fff;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding: unset !important;
+  border: unset;
+}
+
+.btn-2:after,
+.btn-2:before {
+  backface-visibility: hidden;
+  border: 1px solid rgba(#fff, 0);
+  bottom: 0px;
+  content: "";
+  display: block;
+  margin: 0 auto;
+  transition: all 280ms ease-in-out;
+  width: 0;
+}
+
+.btn-2:hover:after,
+.btn-2:hover:before {
+  backface-visibility: hidden;
+  border-color: #fff;
+  transition: width 350ms ease-in-out;
+  width: 100%;
+}
+
+.btn-2:hover:before {
+  bottom: 0;
+  top: 0;
+  width: 100%;
+}
+
+/*
+/////////////// MUSE STYLE /////////////////
+/////////////// MUSE STYLE /////////////////
+ */
+.nav-btn {
+  color: #000;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding: unset !important;
+  border: unset;
+  text-decoration: none;
+}
+
+.nav-btn-2:after,
+.nav-btn-2:before {
+  backface-visibility: hidden;
+  border: 1px solid rgba(#000, 0);
+  bottom: 0px;
+  content: "";
+  display: block;
+  margin: 0px auto;
+  transition: all 280ms ease-in-out;
+  width: 0;
+}
+
+.nav-btn-2:hover:after,
+.nav-btn-2:hover:before {
+  backface-visibility: hidden;
+  border-color: #000;
+  transition: width 350ms ease-in-out;
+  width: 100%;
+}
+
+.nav-btn-2:hover:before {
+  bottom: 0;
+  top: 0;
+  width: 100%;
+}
+
+
+/*
+/////////////// MUSE STYLE /////////////////
+*/
+
+.activeMenu {
+  border-top: 2px solid rgba(#fff, 1);
+  border-bottom: 2px solid rgba(#fff, 1);
+  border-left-color: rgba(#000, 0);
+  border-right-color: rgba(#000, 0);
+  border-radius: unset;
+
+}
+
+.activeMenu:hover:after,
+.activeMenu:hover:before {
+  backface-visibility: hidden;
+  border-color: #000000;
+}
+
+.sideNav {
+  width: 17rem;
+  height: auto;
+  position: fixed;
+  border-radius: 5px;
+}
+
+.sideNavContainer {
+  width: 100px;
+  background: none !important;
+  position: relative;
+  z-index:30
+}
+
+.sideNavBackdrop {
+  height: 100%;
+  width: 100%;
+  background-color: #00000090;
+  position: fixed;
+  top: 0px;
+}
+
+.sideNavItem button {
+  display: block;
+  color: black;
+}
+////////////////////////      NAVBAR      ////////////////////////

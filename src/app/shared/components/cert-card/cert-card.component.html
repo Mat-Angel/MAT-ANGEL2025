@@ -1,0 +1,13 @@
+<mat-card class="bg-dark text-light" style="min-height: 30rem;">
+    <mat-card-header>
+        <mat-card-title class="mb-2">{{cardData().title}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="cardData().imageUrl" [alt]="cardData().title">
+    <mat-card-content class="my-3">
+        <div [innerHTML]="cardData().description"></div>
+    </mat-card-content>
+    <mat-card-actions class="mt-auto pb-3">
+        <button matButton="outlined" data-bs-toggle="modal" data-bs-target="#myModal" (click)="showCert()"
+            class=" text-light"><i class="fa-solid fa-certificate"></i> Ver certificado</button>
+    </mat-card-actions>
+</mat-card>

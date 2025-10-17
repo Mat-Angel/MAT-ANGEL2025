@@ -1,0 +1,19 @@
+
+<div class="row g-0 justify-content-center my-5" style="width: 90%; margin-left: auto; margin-right: auto;">
+  <div class="col-12 col-md-7 justify-content-center loginContainer">
+    <div class="row my-5">
+      <div class="d-flex  justify-content-center col-7 loginElement">
+          <img [src]="`${baseUrl()}MAT_complete_minimal.png`" width="300" title="MAT Angel" draggable="false">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 loginElement">
+        <div class="mb-4 loginTitle">{{authType() | titlecase}}</div>
+      </div>
+    </div>
+
+    <router-outlet/>
+
+  </div>
+</div>

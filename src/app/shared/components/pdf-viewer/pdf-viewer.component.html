@@ -1,0 +1,42 @@
+<!-- <p>url: {{url()}}</p>
+<p>errorMessage: {{errorMessage()}}</p>
+<p>isLoading: {{isLoading()}}</p>
+<p>isEmpty: {{isEmpty()}}</p> -->
+
+@if (urlSecured()) {
+<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content bg-dark text-light">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Certificado</h1>
+                <button type="button" (click)="cleanSelected.emit()" class="btn-close bg-light" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex align-items-center justify-content-center d-none d-md-inline">
+                <iframe id="iframepdf" [src]="urlSecured()" class="w-100 h-100"></iframe>
+            </div>
+            <div class="modal-body d-flex align-items-center justify-content-center d-inline d-md-none">
+                <iframe id="iframepdf" [src]="urlSecured2()" class="w-100 h-100"></iframe>
+            </div>
+            <div class="modal-footer">
+                <button matButton="outlined" type="button" (click)="'cleanCertificate()'" matButton="outlined" class="text-light"
+                    data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+}
+
+@if (errorMessage()) {
+<tr>
+    <td colspan="8" class="text-center">{{errorMessage()}}</td>
+</tr>
+}
+
+
+@if (isLoading()) {
+<tr>
+    <td colspan="8" class="text-center">Cargando....</td>
+</tr>
+}

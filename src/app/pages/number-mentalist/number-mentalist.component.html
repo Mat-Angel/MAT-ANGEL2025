@@ -1,0 +1,43 @@
+<div class="container">
+<h1 class="display-5 fw-bold">Adivinador de números</h1>
+<section class="g-0 bg-light rounded-3 adivinadorContainer">
+
+  <mat-stepper [linear]="false" #stepper style="background-color: unset;">
+    @for (item of stepData(); track item.id) {
+      <mat-step [editable]="false">
+          <ng-template matStepLabel>
+            <span class="d-none d-md-inline">{{item.description}}</span>
+          </ng-template>
+          @switch (item.id) {
+            @case(0){
+              <div [innerHTML]="item.data[0]" class="text-dark fs-6 fw-bold"></div>
+              <button class="px-3 " matButton="filled" matStepperNext>¡Comenzar!</button>
+            }
+            @case(7){
+              <div class="text-dark  display-3 fw-bold text-center mb-5">{{item.data[0]}}</div>
+              <div class="text-dark display-3 fw-bold neonBlueText text-center mb-5">{{CounterResult()}}</div>
+              <button class="px-3" matButton="filled" (click)="stepper.reset(); CounterResult.set(0)">Finalizar</button>
+            }
+            @default {
+              @for (number of item.data; track $index) {
+                <mat-card class="adivinadorNumber text-dark">{{number}}</mat-card>
+              }
+              <br><br>
+              <div class="d-flex flex-row">
+                <button class="px-3 mx-2" matButton="filled" matStepperNext>No está 🙁</button>
+                <button class="px-3" (click)="onSumCount(item.sumNumber)" matButton="filled" matStepperNext>¡Si está! 😃</button>
+              </div>
+              }
+            }
+      </mat-step>
+    }
+
+    <ng-template matStepperIcon="number" let-index="index">
+      <mat-icon  class="d-none d-md-inline">arrow_forward</mat-icon>
+      <span class="d-inline d-md-none">{{ index + 1 }}</span>
+    </ng-template>
+
+  </mat-stepper>
+</section>
+
+</div>

@@ -1,0 +1,54 @@
+<h1 class="container d-flex align-items-center display-5 saira-stencil-font mb-4">
+  <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 14 14" class="blue-neon-color">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1">
+      <path
+        d="M13 2H1a.5.5 0 0 0-.5.5v8a.5.5 0 0 0 .5.5h12a.5.5 0 0 0 .5-.5v-8A.5.5 0 0 0 13 2m-7 9l-1 2.5M8 11l1 2.5m-5 0h6M7.5 2v9M3 5h2M3 8h1" />
+      <path d="m7.5 7l1.21-1a2 2 0 0 1 2.55 0l2.24 2" />
+    </g>
+  </svg>
+  <span class="mx-2">Projects</span>
+</h1>
+
+<section class="container blue-neon-shadow bg-black">
+  @for (projectItem of projectsData; track $index) {
+  <div class="d-flex row my-5 g-0">
+    <div class="d-flex col-sm-12 col-lg-6 card bg-dark" style="height: fit-content;">
+      <div class="card-header">
+        <i class="fa-solid fa-circle text-danger"></i><i class="fa-solid fa-circle text-success"></i><i
+          class="fa-solid fa-circle text-primary"></i>
+      </div>
+      <img class="rounded-bottom" [src]="projectItem.imageUrl" alt="Contendor_Tabs" draggable="false"
+        style="width: 100%">
+    </div>
+
+    <div class="d-flex flex-column col-sm-12 col-lg-6 px-md-4 card-body">
+      <div class="row align-items-center">
+        <h1 class="my-2">{{projectItem.title}}</h1>
+        @for (skill of skillsData; track $index) {
+          @if (projectItem.skills.includes(skill.name)) {
+            <div class="px-2" style="width: 2.5rem;" [style.color]="skill.color" [innerHTML]="skill.icon"></div>
+          }
+        }
+      </div>
+
+      <div class="my-2 display-5 blockquote">
+        <div [innerHTML]="projectItem.completeDescription"></div>
+      </div>
+
+      <div class="d-flex justify-content-start pt-2 mt-auto">
+        @if (projectItem.urlType === 'external') {
+          <a class="btn btn-outline-info" [href]="projectItem.url" target="_blank">
+            Visitar página <i class=" fa-solid fa-up-right-from-square"></i>
+          </a>
+        } @else {
+          <a class="btn btn-outline-info" [routerLink]="projectItem.url" target="_blank">
+            Visitar página <i class=" fa-solid fa-up-right-from-square"></i>
+          </a>
+        }
+      </div>
+    </div>
+  </div>
+
+  <hr class="hr hr-blurry"/>
+  }
+</section>

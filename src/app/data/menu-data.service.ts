@@ -147,42 +147,42 @@ export class MenuDataService {
           id: 'changeDetection',
           subtitle: 'Funcionalidades',
           name: 'Change Detection',
-          link: 'https://projects.mat-angel.com/angular_features/change_detection',
+          link: 'https://portfolio.mat-angel.com/angular_features/change_detection',
           type: 'menuUrl',
           icon: 'fa-solid fa-gear'
         },
         {
           id: 'controlFlow',
           name: 'Control Flow',
-          link: 'https://projects.mat-angel.com/angular_features/control_flow',
+          link: 'https://portfolio.mat-angel.com/angular_features/control_flow',
           type: 'menuUrl',
           icon: 'fa-solid fa-gear'
         },
         {
           id: 'deferOptions',
           name: 'Defer Options',
-          link: 'https://projects.mat-angel.com/angular_features/defer_options',
+          link: 'https://portfolio.mat-angel.com/angular_features/defer_options',
           type: 'menuUrl',
           icon: 'fa-solid fa-gear'
         },
         {
           id: 'deferViews',
           name: 'Defer Views',
-          link: 'https://projects.mat-angel.com/angular_features/defer_views',
+          link: 'https://portfolio.mat-angel.com/angular_features/defer_views',
           type: 'menuUrl',
           icon: 'fa-solid fa-gear'
         },
         {
           id: 'userList',
           name: 'User List',
-          link: 'https://projects.mat-angel.com/angular_features/user_list',
+          link: 'https://portfolio.mat-angel.com/angular_features/user_list',
           type: 'menuUrl',
           icon: 'fa-solid fa-gear'
         },
         {
           id: 'viewTransitions',
           name: 'View Transitions',
-          link: 'https://projects.mat-angel.com/angular_features/view_transitions1',
+          link: 'https://portfolio.mat-angel.com/angular_features/view_transitions1',
           type: 'menuUrl',
           icon: 'fa-solid fa-gear'
         }

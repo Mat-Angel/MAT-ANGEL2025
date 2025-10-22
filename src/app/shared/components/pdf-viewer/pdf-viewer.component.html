@@ -3,7 +3,7 @@
 <p>isLoading: {{isLoading()}}</p>
 <p>isEmpty: {{isEmpty()}}</p> -->
 
-@if (urlSecured()) {
+@if (urlSecured2()) {
 <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-fullscreen">
         <div class="modal-content bg-dark text-light">
@@ -25,7 +25,6 @@
         </div>
     </div>
 </div>
-
 }
 
 @if (errorMessage()) {

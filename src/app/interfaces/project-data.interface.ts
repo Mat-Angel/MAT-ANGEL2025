@@ -28,6 +28,7 @@ interface PdfInfo {
 }
 
 interface SkillItem {
+  id: number;
   name: skillName;
   icon: string;
   color: string;

@@ -28,6 +28,7 @@
     "@angular/material": "^20.1.4",
     "@angular/platform-browser": "^20.1.0",
     "@angular/router": "^20.1.0",
+    "@omnedia/ngx-marquee": "^3.0.0",
     "bootstrap": "^5.3.7",
     "firebase": "^12.3.0",
     "pdfjs-dist": "^5.4.296",

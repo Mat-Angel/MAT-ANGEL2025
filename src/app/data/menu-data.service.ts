@@ -1,7 +1,11 @@
 import { Injectable } from '@angular/core';
+import { environment } from '@environments/environment';
+
 
 @Injectable({ providedIn: 'root' })
 export class MenuDataService {
+  #baseUrl = environment.baseUrl;
+  #portfolioUrl = environment.portfolioUrl;
 
   socialNetworks: MenuItem[] = [
     {
@@ -147,42 +151,42 @@ export class MenuDataService {
           id: 'changeDetection',
           subtitle: 'Funcionalidades',
           name: 'Change Detection',
-          link: 'https://portfolio.mat-angel.com/angular_features/change_detection',
+          link: `${this.#portfolioUrl}angular_features/change_detection`,
           type: 'menuUrl',
           icon: 'fa-solid fa-gear'
         },
         {
           id: 'controlFlow',
           name: 'Control Flow',
-          link: 'https://portfolio.mat-angel.com/angular_features/control_flow',
+          link: `${this.#portfolioUrl}angular_features/control_flow`,
           type: 'menuUrl',
           icon: 'fa-solid fa-gear'
         },
         {
           id: 'deferOptions',
           name: 'Defer Options',
-          link: 'https://portfolio.mat-angel.com/angular_features/defer_options',
+          link: `${this.#portfolioUrl}angular_features/defer_options`,
           type: 'menuUrl',
           icon: 'fa-solid fa-gear'
         },
         {
           id: 'deferViews',
           name: 'Defer Views',
-          link: 'https://portfolio.mat-angel.com/angular_features/defer_views',
+          link: `${this.#portfolioUrl}angular_features/defer_views`,
           type: 'menuUrl',
           icon: 'fa-solid fa-gear'
         },
         {
           id: 'userList',
           name: 'User List',
-          link: 'https://portfolio.mat-angel.com/angular_features/user_list',
+          link: `${this.#portfolioUrl}angular_features/user_list`,
           type: 'menuUrl',
           icon: 'fa-solid fa-gear'
         },
         {
           id: 'viewTransitions',
           name: 'View Transitions',
-          link: 'https://portfolio.mat-angel.com/angular_features/view_transitions1',
+          link: `${this.#portfolioUrl}angular_features/view_transitions1`,
           type: 'menuUrl',
           icon: 'fa-solid fa-gear'
         }

@@ -13,10 +13,12 @@ import { BlobCacheService } from '../../services/blob-cache.service';
 import { rxResource } from '@angular/core/rxjs-interop';
 import { of } from 'rxjs';
 import { environment } from '@environments/environment';
+import { SafeHtmlPipe } from '../../pipes/safe-html.pipe';
+import { SkillsMarquee } from "./skills-marquee/skills-marquee";
 
 @Component({
   selector: 'app-home-page',
-  imports: [TypeWritingPipe, CommonModule, RouterLink, InfoCardComponent, CertCardComponent, MatButtonModule, PdfViewerComponent],
+  imports: [TypeWritingPipe, CommonModule, RouterLink, InfoCardComponent, CertCardComponent, MatButtonModule, PdfViewerComponent, SafeHtmlPipe, SkillsMarquee],
   templateUrl: './home-page.html',
   styleUrl: './home-page.css'
 })

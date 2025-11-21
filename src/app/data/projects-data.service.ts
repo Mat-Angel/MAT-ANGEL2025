@@ -47,7 +47,7 @@ export class ProjectsDataService {
     {
       title: 'Universidad Excel - Básico, Intermedio y Avanzado',
       skill: 'Excel',
-      description: 'Curso completo de Excel, desde nivel básico hasta avanzado, incluyendo tablas dinámicas, gráficos, Power Query y automatización con macros y VBA. Impartido por <a target="_blank" href="https://www.globalmentoring.com.mx/">Ubaldo Acosta - Global Mentoring</a>',
+      description: 'Curso completo de Excel, desde nivel básico hasta avanzado, incluyendo tablas dinámicas, gráficos, Power Query y automatización con macros y VBA. Impartido por <a target="_blank" href="https://www.globalmentoring.com.mx/">Ubaldo Acosta - Global Mentoring</a>.',
       imageUrl: `${this.baseUrl()}certificates/Universidad_Excel.jpg`,
       fileUrl: `${this.baseUrl()}certificates/Certificado_Udemy_Universidad_Excel.pdf`,
       author: 'https://fernando-herrera.com/course/angular-cero-experto/',
@@ -55,7 +55,7 @@ export class ProjectsDataService {
     {
       title: 'Python: Fundamentos y masterclass',
       skill: 'Python',
-      description: 'Impartido en <a target="_blank" href="https://www.santanderopenacademy.com/es/courses/introduction_to_python_programming.html">Santander Open Academy</a>. Se trata de un curso introductorio al lenguaje de programación Python, diseñado para desarrollar las bases de la lógica computacional y la escritura de código limpio y estructurado',
+      description: 'Impartido en <a target="_blank" href="https://www.santanderopenacademy.com/es/courses/introduction_to_python_programming.html">Santander Open Academy</a>. Se trata de un curso introductorio al lenguaje de programación Python, diseñado para desarrollar las bases de la lógica computacional y la escritura de código limpio y estructurado.',
       imageUrl: `${this.baseUrl()}certificates/openAcademy_Python.jpg`,
       fileUrl: `${this.baseUrl()}certificates/CertificadoCursoPythonSantander.pdf`,
       author: 'https://fernando-herrera.com/course/angular-cero-experto/',

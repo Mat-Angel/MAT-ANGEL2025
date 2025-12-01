@@ -9,6 +9,13 @@ export class MenuDataService {
 
   socialNetworks: MenuItem[] = [
     {
+      id: 'gitHub',
+      name: 'GitHub',
+      link: 'https://github.com/Mat-Angel',
+      type: 'menuUrl',
+      icon: 'fa-brands fa-github'
+    },
+    {
       id: 'linkedin',
       name: 'Linkedin',
       link: 'https://www.linkedin.com/in/mat-angel/',

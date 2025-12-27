@@ -5,3 +5,29 @@
   width: 100%;
   height: auto;
 }
+
+
+.overflow-wrapper {
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #15c1ffb0 transparent;
+}
+
+.overflow-wrapper::-webkit-scrollbar {
+  height: 6px;
+}
+.overflow-wrapper::-webkit-scrollbar-track {
+  background: transparent;
+}
+.overflow-wrapper::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: rgba(0,0,0,.25);
+}
+.overflow-wrapper::-webkit-scrollbar-thumb:hover {
+  background: rgba(0,0,0,.45);
+}
+
+.item-card {
+  scroll-snap-align: start; /* o center */
+}

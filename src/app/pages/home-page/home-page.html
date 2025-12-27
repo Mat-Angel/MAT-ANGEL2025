@@ -73,7 +73,7 @@
   <hr class="hr hr-blurry"/>
 
   <div class="d-none d-md-inline">
-    <div class="row justify-content-around">
+    <div class="row flex-nowrap justify-content-around overflow-x-auto">
       @for (cardItem of projectsData; track $index) {
         <info-card class="mb-5" [cardData]="cardItem" style="width: 25rem;"></info-card>
       }

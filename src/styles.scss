@@ -416,3 +416,12 @@ img {
   color: black;
 }
 ////////////////////////      NAVBAR      ////////////////////////
+
+
+.skill {
+  transition: transform .2s ease;  /* suaviza el efecto */
+}
+
+.skill:hover {
+  transform: scale(2);  /* 1.0 = tamaño normal */
+}

@@ -26,7 +26,7 @@
         <h1 class="my-2">{{projectItem.title}}</h1>
         @for (skill of skillsData; track $index) {
           @if (projectItem.skills.includes(skill.name)) {
-            <div class="px-2" style="width: 2.5rem;" [style.color]="skill.color" [innerHTML]="skill.icon | SafeHtml"></div>
+            <div class="skill px-2" style="width: 2.5rem;" [style.color]="skill.color" [innerHTML]="skill.icon | SafeHtml" [title]="skill.name"></div>
           }
         }
       </div>
